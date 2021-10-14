@@ -5,9 +5,9 @@
  */
 package boletin2_x;
 
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 /**
  *
@@ -40,7 +40,7 @@ public class Operaciones {
     }
 
     public float operacionSuma(float suma) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
 
         suma = num1 + num2;
 
@@ -51,7 +51,7 @@ public class Operaciones {
     }
 
     public float operacionResta(float resta) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
 
         resta = num1 - num2;
 
@@ -60,7 +60,7 @@ public class Operaciones {
     }
 
     public float operacionProducto(float producto) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       
 
         producto = num1 * num2;
 
@@ -69,7 +69,7 @@ public class Operaciones {
     }
 
     public float operacionCociente(float cociente) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       
 
         cociente = num1 / num2;
 
