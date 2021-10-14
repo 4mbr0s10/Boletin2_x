@@ -44,72 +44,31 @@ public class Metodos {
         return cambio;
     }
 
-    public static float operacionSuma(float suma) throws IOException {
+    public static float operaciones(float resultado) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Introduzca o primeiro número: ");
-        float num1 = Float.parseFloat(br.readLine());
-        System.out.println("Introduzca o segundo número: ");
-        float num2 = Float.parseFloat(br.readLine());
-        suma = num1 + num2;
-
-        System.out.println("A suma é: " + suma);
-
-        return suma;
+        Operaciones op = new Operaciones(0, 0);
+        System.out.println("Introduzca un número: ");
+        op.setNum1(Float.parseFloat(br.readLine()));
+        System.out.println("Introduzca otro número: ");
+        op.setNum2(Float.parseFloat(br.readLine()));
+        System.out.println(op.operacionSuma(resultado));
+        System.out.println(op.operacionResta(resultado));
+        System.out.println(op.operacionProducto(resultado));
+        System.out.println(op.operacionCociente(resultado));
+        return resultado;
 
     }
 
-    public static float operacionResta(float resta) throws IOException {
+// 
+    public static long metroMilla(long conversion) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Introduzca o primeiro número: ");
-        float num1 = Float.parseFloat(br.readLine());
-        System.out.println("Introduzca o segundo número: ");
-        float num2 = Float.parseFloat(br.readLine());
-        resta = num1 - num2;
-        
+        long metro = 1852;
+        System.out.println("Introduzca o número de millas que queres convertir: ");
+        long millas = Long.parseLong(br.readLine());
+        conversion = millas * metro;
+        System.out.println("O total en metros é: " + conversion);
 
-        System.out.println("O resultado da resta: " + resta);
-
-        return resta;
-
+        return conversion;
     }
 
-    public static float operacionProducto(float producto) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Introduzca o primeiro número: ");
-        float num1 = Float.parseFloat(br.readLine());
-        System.out.println("Introduzca o segundo número: ");
-        float num2 = Float.parseFloat(br.readLine());
-        producto = num1*num2;
-
-        System.out.println("O producto é " + producto);
-
-        return producto;
-
-    }
-
-    public static float operacionCociente(float cociente) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Introduzca o primeiro número: ");
-        float num1 = Float.parseFloat(br.readLine());
-        System.out.println("Introduzca o segundo número: ");
-        float num2 = Float.parseFloat(br.readLine());
-        cociente = num1/num2;
-
-        System.out.println("O cociente é: " + cociente);
-
-        return cociente;
-
-    }
-    public static long metroMilla(long conversion)throws IOException{
-         BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
-            long metro=1852;
-            System.out.println("Introduzca o número de millas que queres convertir: ");
-            long millas=Long.parseLong(br.readLine());
-            conversion= millas*metro;
-            System.out.println("O total en metros é: "+conversion);
-        
-        
-       return conversion; 
-    }
-            
 }
